@@ -66,6 +66,3 @@ bind "set show-all-if-ambiguous On" # this allows you to automatically show comp
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-
-
-
