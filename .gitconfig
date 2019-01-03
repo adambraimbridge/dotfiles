@@ -1,0 +1,27 @@
+[user]
+	name = Braimbridge, Adam
+	email = Adam.Braimbridge@ft.com
+[push]
+	default = current
+[color]
+	ui = true
+[core]
+	pager = less -+X -+F -C
+[status]
+	showUntrackedFile = all
+[alias]
+	up = !git gc --prune && git pull --rebase --autostash && git cleanup && git branch && :
+	cleanup = !git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d
+[url "https://"]
+	insteadOf = git://
+[secrets]
+	providers = git secrets --aws-provider
+	patterns = [A-Z0-9]{20}
+	patterns = (\"|')?(AWS|aws|Aws)?_?(SECRET|secret|Secret)?_?(ACCESS|access|Access)?_?(KEY|key|Key)(\"|')?\\s*(:|=>|=)\\s*(\"|')?[A-Za-z0-9/\\+=]{40}(\"|')?
+	patterns = (\"|')?(AWS|aws|Aws)?_?(ACCOUNT|account|Account)_?(ID|id|Id)?(\"|')?\\s*(:|=>|=)\\s*(\"|')?[0-9]{4}\\-?[0-9]{4}\\-?[0-9]{4}(\"|')?
+	allowed = AKIAIOSFODNN7EXAMPLE
+	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+[credential]
+	helper = osxkeychain
+[fetch]
+	prune = true

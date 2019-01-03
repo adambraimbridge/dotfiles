@@ -1,0 +1,8 @@
+shell -$SHELL
+setenv SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+
+startup_message off
+hardstatus alwayslastline "%{bk} %= $LOGNAME %{Yk} %H "
+
+termcapinfo xterm* ti@:te@
+

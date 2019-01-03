@@ -1,0 +1,4 @@
+#!/bin/bash
+clear;
+echo -e "\n# git diff\n"; git diff;
+echo -e "\n\n";
