@@ -1,0 +1,21 @@
+# Set the Vault cluster address.
+export VAULT_ADDR=https://vault.in.ft.com
+
+# Set the personal access token to use for authentication with Vault.
+export VAULT_AUTH_GITHUB_TOKEN="$(security find-generic-password -a $USER -s "FT Vault" -w)"
+
+# Prevent `vault write` commands from being stored in history.
+function vault () {
+  command vault "$@"
+  if [[ $1 == write ]]; then history -d $((HISTCMD-1)) &> /dev/null; fi
+}
+
+# Auth vault if appropriate
+VAULT_AUTH_DISPLAY_NAME=`vault token-lookup &>/dev/null | grep 'display_name' | cut -d "	" -f 2`
+EMPTY=""
+if [ "$VAULT_AUTH_DISPLAY_NAME" == "$EMPTY" ]; then
+  echo "Authenticating Vault ..."
+  vault login --method github
+else
+  echo "Authenticated in vault as: ${VAULT_AUTH_DISPLAY_NAME}"
+fi

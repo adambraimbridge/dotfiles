@@ -1,0 +1,8 @@
+# Sign into Heroku if appropriate
+HEROKU_AUTH_WHOAMI=`heroku auth:whoami`
+NOT_LOGGED_IN=""
+echo "heroku auth:whoami: ${HEROKU_AUTH_WHOAMI}"
+if [ "$HEROKU_AUTH_WHOAMI" == "$NOT_LOGGED_IN" ]; then
+	echo "Please sign into heroku."
+	export HEROKU_ORGANIZATION=financial-times; heroku login --sso
+fi
