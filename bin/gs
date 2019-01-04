@@ -1,3 +1,4 @@
 #!/bin/bash
-clear; git status;
-echo -e "\n\n";
+clear;
+git status;
+echo -e "\n";

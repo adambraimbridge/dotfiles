@@ -1,0 +1,4 @@
+#!/bin/bash
+clear;
+git gc --prune && git pull --rebase --autostash && gc && gb;
+echo -e "\n";

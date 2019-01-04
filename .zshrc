@@ -11,7 +11,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+# plugins=(git)
+alias g="git"
 
 export PATH="/Users/adambraimbridge/Library/Python/3.4/bin:/Users/adambraimbridge/.rbenv/shims:/usr/local/bin:/Users/adambraimbridge/shellfiles/bin:node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"

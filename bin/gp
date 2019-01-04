@@ -1,4 +1,3 @@
 #!/bin/bash
-clear;
-git diff;
+git push -u;
 echo -e "\n";
