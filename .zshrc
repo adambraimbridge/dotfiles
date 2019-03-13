@@ -22,6 +22,8 @@ alias auth="source ~/.auth_heroku; source ~/.auth_vault;"
 
 source ~/.auth_github
 
+source ~/.caffeinate.sh
+
 # Old junk
 # source ~/.cdn
 # alias gh="open $(git config remote.origin.url | sed "s/git@\(.*\):\(.*\).git/https:\/\/\1\/\2/")/tree/$(git symbolic-ref --quiet --short HEAD )"
@@ -45,3 +47,7 @@ export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/adambraimbridge/Sites/mupi/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/adambraimbridge/Sites/mupi/node_modules/tabtab/.completions/sls.zsh
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/adambraimbridge/Sites/next-houston-api/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/adambraimbridge/Sites/next-houston-api/node_modules/tabtab/.completions/slss.zsh

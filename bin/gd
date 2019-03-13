@@ -1,4 +1,4 @@
 #!/bin/bash
 clear;
-git diff;
+git diff $1;
 echo -e "\n";
